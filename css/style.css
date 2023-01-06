@@ -1463,21 +1463,9 @@ h6 {
           justify-content: center;
 }
 
-@supports (height: clamp( 8rem , 5.7142857143rem  +  3.5714285714vw , 10rem )) {
-  .product__img {
-    height: clamp( 8rem , 5.7142857143rem  +  3.5714285714vw , 10rem );
-  }
-}
-
-@supports not (height: clamp( 8rem , 5.7142857143rem  +  3.5714285714vw , 10rem )) {
-  .product__img {
-    height: calc(8rem + 2 * (100vw - 64rem) / 56);
-  }
-}
-
-.product__img img {
-  max-width: 100%;
-  height: auto;
+.product__ibg {
+  width: 75%;
+  padding-bottom: 40%;
 }
 
 .product__title {
