@@ -1618,22 +1618,13 @@ h6 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   padding: 0px 100px;
-}
-
-@supports (gap: clamp( 0.0000000625rem , -3.0811736341rem  +  4.4817071951vw , 2.296875rem )) {
-  .order__item {
-    gap: clamp( 0.0000000625rem , -3.0811736341rem  +  4.4817071951vw , 2.296875rem );
-  }
-}
-
-@supports not (gap: clamp( 0.0000000625rem , -3.0811736341rem  +  4.4817071951vw , 2.296875rem )) {
-  .order__item {
-    gap: calc(0.0000000625rem + 2.2968749375 * (100vw - 68.75rem) / 51.25);
-  }
 }
 
 .order__item_imgl {
@@ -1641,18 +1632,6 @@ h6 {
   -webkit-box-direction: reverse;
       -ms-flex-direction: row-reverse;
           flex-direction: row-reverse;
-}
-
-@supports (padding-right: clamp( 12.5rem , -9.4375rem  +  45.703125vw , 19.8125rem )) {
-  .order__item_imgl {
-    padding-right: clamp( 12.5rem , -9.4375rem  +  45.703125vw , 19.8125rem );
-  }
-}
-
-@supports not (padding-right: clamp( 12.5rem , -9.4375rem  +  45.703125vw , 19.8125rem )) {
-  .order__item_imgl {
-    padding-right: calc(12.5rem + 7.3125 * (100vw - 48rem) / 16);
-  }
 }
 
 .order__content {
@@ -2133,7 +2112,11 @@ h6 {
 }
 
 @media (min-width: 86.625em) {
-  .bastsale__img img:last-child {
+  .bastsale__img .ded01 {
+    display: block;
+  }
+
+  .bastsale__img .ded02 {
     display: none;
   }
 }
@@ -2146,8 +2129,12 @@ h6 {
     padding-bottom: 45%;
   }
 
-  .bastsale__img img:first-child {
+  .bastsale__img .ded01 {
     display: none;
+  }
+
+  .bastsale__img .ded02 {
+    display: block;
   }
 }
 
@@ -2333,17 +2320,11 @@ h6 {
     padding: 30px;
   }
 
-@supports (padding-left: clamp( 12.5rem , -9.4375rem  +  45.703125vw , 19.8125rem )) {
-    .order__item_imgr {
-      padding-left: clamp( 12.5rem , -9.4375rem  +  45.703125vw , 19.8125rem );
-    }
-}
-
-@supports not (padding-left: clamp( 12.5rem , -9.4375rem  +  45.703125vw , 19.8125rem )) {
-    .order__item_imgr {
-      padding-left: calc(12.5rem + 7.3125 * (100vw - 48rem) / 16);
-    }
-}
+  .order__item {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
 
   .order__item_imgl .order__img {
     right: 0;
@@ -2355,7 +2336,7 @@ h6 {
         -ms-flex: 0 0 43.182%;
             flex: 0 0 43.182%;
     position: absolute;
-    left: -20px;
+    left: 0px;
     top: -50px;
   }
 
